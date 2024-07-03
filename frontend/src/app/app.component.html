@@ -1,0 +1,12 @@
+<div class="app-container">
+  <nav>
+    <a routerLink="/products">Products</a>
+    <a routerLink="/cart">Cart</a>
+    <a routerLink="/orders">Orders</a>
+    <a routerLink="/admin/products">Admin Products</a>
+    <a routerLink="/register">Register</a>
+    <button *ngIf="isLoggedIn()" (click)="logout()">Logout</button>
+  </nav>
+
+  <router-outlet></router-outlet>
+</div>

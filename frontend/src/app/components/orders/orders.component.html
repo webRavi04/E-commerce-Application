@@ -1,0 +1,16 @@
+<div *ngFor="let order of orders">
+    <div>
+        <p>Order ID: {{ order._id }}</p>
+        <p>User ID: {{ order.userId }}</p>
+        <p>Total Price: {{ order.totalPrice }}</p>
+        <p>Status: {{ order.status }}</p>
+        <h5>Products:
+            <ul>
+                <li *ngFor="let product of order.products">
+                    {{ product.productId }} - Quantity: {{ product.quantity }}
+                </li>
+            </ul>
+        </h5>
+        <p>Ordered At: {{ order.createdAt | date }}</p>
+    </div>
+</div>
